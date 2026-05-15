@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: my-drive
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SFTP_HOST
+        sync: false
+      - key: SFTP_USER
+        sync: false
+      - key: SFTP_PORT
+        value: "23"
+      - key: NODE_ENV
+        value: production
